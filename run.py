@@ -23,6 +23,19 @@ from multiprocessing import Pool
 from arena.experiments import build_suite, run_experiment
 
 
+def _low_priority():
+    """Let whatever else is running on the machine go first (Windows and Unix)."""
+    try:
+        if os.name == "nt":
+            import ctypes
+            k = ctypes.windll.kernel32
+            k.SetPriorityClass(k.GetCurrentProcess(), 0x00004000)   # BELOW_NORMAL_PRIORITY_CLASS
+        else:
+            os.nice(5)
+    except Exception:
+        pass
+
+
 def _work(args):
     exp, out_dir = args
     try:
@@ -61,7 +74,7 @@ def main():
     os.makedirs(a.out, exist_ok=True)
     log = open(os.path.join(a.out, "log.txt"), "a", encoding="utf-8")
     t0 = time.time()
-    with Pool(a.workers) as pool:
+    with Pool(a.workers, initializer=_low_priority) as pool:
         for k, (eid, ret, metric, secs, err) in enumerate(pool.imap_unordered(_work, [(e, a.out) for e in todo]), 1):
             elapsed = time.time() - t0
             eta = elapsed / k * (len(todo) - k)

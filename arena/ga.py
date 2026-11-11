@@ -8,12 +8,10 @@ Each generation:
 
 The whole population is simulated at once as one big NumPy batch.
 """
-import time
-
 import numpy as np
 
 from .envs import make_env
-from .evaluate import EVAL_EPISODES, EVAL_SEED, Curve, NetPolicy, run_episodes
+from .evaluate import EVAL_EPISODES, EVAL_SEED, Curve, cpu_seconds, NetPolicy, run_episodes
 from .nets import BatchedNet, init_population
 
 TOP_K = 5   # how many of a generation's best are re-scored at each checkpoint
@@ -35,13 +33,13 @@ def train_ga(env_name, spec, seed=0, generations=100, pop=128, episodes=4, sigma
     best_score, best_params = -np.inf, params[0].copy()
     train_time, steps = 0.0, 0
     for g in range(generations + 1):
-        t0 = time.perf_counter()
+        t0 = cpu_seconds()
         policy = NetPolicy(spec, n_in, n_out, params)
         ret, _, used = run_episodes(env, policy, seed * 1_000_003 + g + 1)
         fitness = ret.reshape(pop, episodes).mean(axis=1)
         steps += used
         order = np.argsort(-fitness)
-        train_time += time.perf_counter() - t0
+        train_time += cpu_seconds() - t0
 
         if g % eval_every == 0 or g == generations:
             # Fitness from a handful of episodes is noisy, so the generation's top few are
@@ -61,7 +59,7 @@ def train_ga(env_name, spec, seed=0, generations=100, pop=128, episodes=4, sigma
         if g == generations:
             break
 
-        t0 = time.perf_counter()
+        t0 = cpu_seconds()
         parents = params[order[:n_parents]]
         n_children = pop - n_elite
         children = parents[rng.integers(0, n_parents, n_children)]
@@ -70,7 +68,7 @@ def train_ga(env_name, spec, seed=0, generations=100, pop=128, episodes=4, sigma
         children = np.where(mix, mates, children)
         children = children + sigma * scale * rng.standard_normal(children.shape)
         params = np.concatenate([params[order[:n_elite]], children], axis=0)
-        train_time += time.perf_counter() - t0
+        train_time += cpu_seconds() - t0
 
     model = {"kind": "net", "spec": spec.to_dict(), "n_in": n_in, "n_out": n_out, "params": best_params}
     return {

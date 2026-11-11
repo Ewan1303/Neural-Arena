@@ -9,12 +9,20 @@ highest output wins) on fixed sets of scenarios.
     TEST_SEED  200 different scenarios used once at the end for the reported score
 """
 import json
+import time
 
 import numpy as np
 import torch
 
 from .envs import make_env
 from .nets import BatchedNet, NetSpec
+
+def cpu_seconds():
+    """The clock used for "training time": CPU time used by this process. Unlike
+    wall-clock time it does not grow when other programs are competing for the
+    processor, so runs made on a busy machine stay comparable."""
+    return time.process_time()
+
 
 EVAL_SEED = 10_001
 TEST_SEED = 20_002

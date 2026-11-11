@@ -23,13 +23,12 @@ computed exactly by working through its nodes one depth level at a time.
 """
 import math
 import random
-import time
 
 import numpy as np
 
 from .activations import numpy_act
 from .envs import make_env
-from .evaluate import EVAL_EPISODES, EVAL_SEED, Curve, run_episodes
+from .evaluate import EVAL_EPISODES, EVAL_SEED, Curve, cpu_seconds, run_episodes
 
 EVOLVABLE = ("tanh", "sigmoid", "relu", "sin", "gaussian", "abs", "identity")
 WEIGHT_LIMIT = 8.0
@@ -379,7 +378,7 @@ def train_neat(env_name, seed=0, generations=100, activations=("tanh",), recurre
     best_score, best_genome = -math.inf, genomes[0].copy()
     train_time, steps = 0.0, 0
     for gen in range(generations + 1):
-        t0 = time.perf_counter()
+        t0 = cpu_seconds()
         ret, _, used = run_episodes(env, NeatPolicy(genomes, n_in, n_out, recurrent),
                                     seed * 1_000_003 + gen + 1)
         fit = ret.reshape(pop, episodes).mean(axis=1)
@@ -387,7 +386,7 @@ def train_neat(env_name, seed=0, generations=100, activations=("tanh",), recurre
             g.fitness = float(f)
         steps += used
         champion = genomes[int(fit.argmax())]
-        train_time += time.perf_counter() - t0
+        train_time += cpu_seconds() - t0
 
         if gen % eval_every == 0 or gen == generations:
             # Fitness from a handful of episodes is noisy, so the generation's top few are
@@ -412,7 +411,7 @@ def train_neat(env_name, seed=0, generations=100, activations=("tanh",), recurre
         if gen == generations:
             break
 
-        t0 = time.perf_counter()
+        t0 = cpu_seconds()
         # ---- sort the population into species
         for s in species:
             s["members"] = []
@@ -469,7 +468,7 @@ def train_neat(env_name, seed=0, generations=100, activations=("tanh",), recurre
             mutate(child, n_in, n_out, rnd, innov, cfg, activations, recurrent)
             nxt.append(child)
         genomes = nxt[:pop]
-        train_time += time.perf_counter() - t0
+        train_time += cpu_seconds() - t0
 
     hidden = best_genome.hidden_ids(n_io)
     model = {"kind": "neat", "genome": best_genome.to_dict(), "n_in": n_in, "n_out": n_out,

@@ -10,13 +10,11 @@ over chunks of `bptt` steps. Each chunk starts from the hidden state the network
 actually had at that moment during the rollout, and the state is reset at
 episode boundaries.
 """
-import time
-
 import numpy as np
 import torch
 
 from .envs import make_env
-from .evaluate import EVAL_EPISODES, Curve, NetPolicy, evaluate
+from .evaluate import EVAL_EPISODES, Curve, NetPolicy, cpu_seconds, evaluate
 from .nets import count_params, make_torch_net
 
 
@@ -72,7 +70,7 @@ def train_ppo(env_name, spec, seed=0, total_steps=1_000_000, n_envs=64, rollout=
     reset_flag = torch.ones(N)
     checkpoint(0)
     for u in range(1, n_updates + 1):
-        t0 = time.perf_counter()
+        t0 = cpu_seconds()
         for group in opt.param_groups:
             group["lr"] = lr * (1.0 - 0.9 * (u - 1) / n_updates)     # linear decay to 10%
         with torch.no_grad():
@@ -150,7 +148,7 @@ def train_ppo(env_name, spec, seed=0, total_steps=1_000_000, n_envs=64, rollout=
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(list(actor.parameters()) + list(critic.parameters()), max_grad)
                 opt.step()
-        train_time += time.perf_counter() - t0
+        train_time += cpu_seconds() - t0
         if u % eval_every == 0 or u == n_updates:
             checkpoint(u)
 
