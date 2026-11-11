@@ -1,0 +1,16 @@
+# Local editor and assistant settings
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Working files
+scratch/
+
+# Every trained model (about 400 files). The champions used for the GIFs are kept in results/champions/.
+results/models/
+results/log.txt
