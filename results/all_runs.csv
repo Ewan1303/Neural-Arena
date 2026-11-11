@@ -1,0 +1,409 @@
+id,method,env,config,seed,test_return,test_metric,metric_name,train_seconds,env_steps,parameters
+ga__drone__gru-64__s0,ga,drone,gru 64,0,29.84,2.13,waypoints reached,133.8,20745926,15044
+ga__drone__gru-64__s1,ga,drone,gru 64,1,33.66,2.155,waypoints reached,134.8,20128058,15044
+ga__drone__gru-64__s2,ga,drone,gru 64,2,31.77,2.005,waypoints reached,129.2,21143533,15044
+ga__drone__mlp-16-tanh__s0,ga,drone,mlp 16 tanh,0,0.67,0.97,waypoints reached,39.4,18073084,260
+ga__drone__mlp-16-tanh__s1,ga,drone,mlp 16 tanh,1,41.46,2.485,waypoints reached,37.3,19813095,260
+ga__drone__mlp-16-tanh__s2,ga,drone,mlp 16 tanh,2,28.93,2.205,waypoints reached,39.1,22293106,260
+ga__drone__mlp-2x64-relu__s0,ga,drone,mlp 2x64 relu,0,-2.5,0.785,waypoints reached,73.9,15510560,5188
+ga__drone__mlp-2x64-relu__s1,ga,drone,mlp 2x64 relu,1,8.78,0.78,waypoints reached,61.7,17304700,5188
+ga__drone__mlp-2x64-relu__s2,ga,drone,mlp 2x64 relu,2,-12.59,0.565,waypoints reached,55.4,10229029,5188
+ga__drone__mlp-2x64-sigmoid-softmax__s0,ga,drone,mlp 2x64 sigmoid>softmax,0,-15.45,0.415,waypoints reached,64.5,6990007,5188
+ga__drone__mlp-2x64-sigmoid-softmax__s1,ga,drone,mlp 2x64 sigmoid>softmax,1,-17.31,0.265,waypoints reached,62.2,7229489,5188
+ga__drone__mlp-2x64-sigmoid-softmax__s2,ga,drone,mlp 2x64 sigmoid>softmax,2,-14.94,0.475,waypoints reached,59.0,6301668,5188
+ga__drone__mlp-2x64-sigmoid__s0,ga,drone,mlp 2x64 sigmoid,0,5.42,0.355,waypoints reached,62.5,11651621,5188
+ga__drone__mlp-2x64-sigmoid__s1,ga,drone,mlp 2x64 sigmoid,1,5.3,0.43,waypoints reached,56.6,8670471,5188
+ga__drone__mlp-2x64-sigmoid__s2,ga,drone,mlp 2x64 sigmoid,2,-14.61,0.505,waypoints reached,57.2,7908513,5188
+ga__drone__mlp-2x64-sin__s0,ga,drone,mlp 2x64 sin,0,33.19,2.12,waypoints reached,67.7,21029040,5188
+ga__drone__mlp-2x64-sin__s1,ga,drone,mlp 2x64 sin,1,45.32,2.83,waypoints reached,67.0,21485401,5188
+ga__drone__mlp-2x64-sin__s2,ga,drone,mlp 2x64 sin,2,40.96,2.54,waypoints reached,67.9,20836609,5188
+ga__drone__mlp-2x64-tanh__s0,ga,drone,mlp 2x64 tanh,0,33.4,2.155,waypoints reached,66.8,17788443,5188
+ga__drone__mlp-2x64-tanh__s1,ga,drone,mlp 2x64 tanh,1,25.05,1.68,waypoints reached,72.1,19170227,5188
+ga__drone__mlp-2x64-tanh__s2,ga,drone,mlp 2x64 tanh,2,23.17,1.47,waypoints reached,66.2,19037810,5188
+ga__drone__rnn-64-tanh__s0,ga,drone,rnn 64 tanh,0,27.58,1.995,waypoints reached,62.2,20625613,5124
+ga__drone__rnn-64-tanh__s1,ga,drone,rnn 64 tanh,1,47.93,3.04,waypoints reached,68.5,19655146,5124
+ga__drone__rnn-64-tanh__s2,ga,drone,rnn 64 tanh,2,16.01,1.235,waypoints reached,63.5,19030656,5124
+ga__lander__gru-64__s0,ga,lander,gru 64,0,206.75,1.0,landing rate,53.4,4757850,14084
+ga__lander__gru-64__s1,ga,lander,gru 64,1,205.17,1.0,landing rate,52.2,4419475,14084
+ga__lander__gru-64__s2,ga,lander,gru 64,2,206.14,0.975,landing rate,50.8,4040823,14084
+ga__lander__mlp-16-tanh__s0,ga,lander,mlp 16 tanh,0,203.98,1.0,landing rate,14.1,5241682,180
+ga__lander__mlp-16-tanh__s1,ga,lander,mlp 16 tanh,1,182.01,0.98,landing rate,13.5,3904712,180
+ga__lander__mlp-16-tanh__s2,ga,lander,mlp 16 tanh,2,204.04,1.0,landing rate,14.4,4465601,180
+ga__lander__mlp-2x64-relu__s0,ga,lander,mlp 2x64 relu,0,198.42,0.985,landing rate,18.4,3857424,4868
+ga__lander__mlp-2x64-relu__s1,ga,lander,mlp 2x64 relu,1,-69.71,0.01,landing rate,12.0,1925826,4868
+ga__lander__mlp-2x64-relu__s2,ga,lander,mlp 2x64 relu,2,202.36,1.0,landing rate,17.7,3314961,4868
+ga__lander__mlp-2x64-sigmoid-softmax__s0,ga,lander,mlp 2x64 sigmoid>softmax,0,-129.38,0.0,landing rate,6.0,1560742,4868
+ga__lander__mlp-2x64-sigmoid-softmax__s1,ga,lander,mlp 2x64 sigmoid>softmax,1,-103.48,0.0,landing rate,14.5,1796895,4868
+ga__lander__mlp-2x64-sigmoid-softmax__s2,ga,lander,mlp 2x64 sigmoid>softmax,2,-110.99,0.0,landing rate,11.1,1710562,4868
+ga__lander__mlp-2x64-sigmoid__s0,ga,lander,mlp 2x64 sigmoid,0,-103.71,0.0,landing rate,13.2,1906634,4868
+ga__lander__mlp-2x64-sigmoid__s1,ga,lander,mlp 2x64 sigmoid,1,-141.58,0.0,landing rate,4.6,1536709,4868
+ga__lander__mlp-2x64-sigmoid__s2,ga,lander,mlp 2x64 sigmoid,2,-105.7,0.0,landing rate,10.9,1791614,4868
+ga__lander__mlp-2x64-sin__s0,ga,lander,mlp 2x64 sin,0,203.98,1.0,landing rate,23.3,4555572,4868
+ga__lander__mlp-2x64-sin__s1,ga,lander,mlp 2x64 sin,1,201.52,0.995,landing rate,22.9,4407507,4868
+ga__lander__mlp-2x64-sin__s2,ga,lander,mlp 2x64 sin,2,209.79,1.0,landing rate,20.0,4733324,4868
+ga__lander__mlp-2x64-tanh__s0,ga,lander,mlp 2x64 tanh,0,200.54,0.99,landing rate,25.4,4628310,4868
+ga__lander__mlp-2x64-tanh__s1,ga,lander,mlp 2x64 tanh,1,210.89,1.0,landing rate,25.8,4660647,4868
+ga__lander__mlp-2x64-tanh__s2,ga,lander,mlp 2x64 tanh,2,200.04,0.995,landing rate,23.2,4249912,4868
+ga__lander__rnn-64-tanh__s0,ga,lander,rnn 64 tanh,0,195.43,0.975,landing rate,19.8,4235790,4804
+ga__lander__rnn-64-tanh__s1,ga,lander,rnn 64 tanh,1,198.31,0.985,landing rate,21.6,5161463,4804
+ga__lander__rnn-64-tanh__s2,ga,lander,rnn 64 tanh,2,204.38,1.0,landing rate,21.8,4388433,4804
+ga__memory_lander__gru-64__s0,ga,memory_lander,gru 64,0,7.68,0.115,landing rate,41.1,2712435,14468
+ga__memory_lander__gru-64__s1,ga,memory_lander,gru 64,1,-79.16,0.02,landing rate,39.2,2427310,14468
+ga__memory_lander__gru-64__s2,ga,memory_lander,gru 64,2,175.19,0.825,landing rate,58.2,5579017,14468
+ga__memory_lander__mlp-16-tanh__s0,ga,memory_lander,mlp 16 tanh,0,168.03,0.725,landing rate,14.2,5861170,212
+ga__memory_lander__mlp-16-tanh__s1,ga,memory_lander,mlp 16 tanh,1,180.31,0.835,landing rate,16.2,6085362,212
+ga__memory_lander__mlp-16-tanh__s2,ga,memory_lander,mlp 16 tanh,2,122.99,0.34,landing rate,14.6,5692537,212
+ga__memory_lander__mlp-2x64-relu__s0,ga,memory_lander,mlp 2x64 relu,0,49.42,0.17,landing rate,18.8,2770904,4996
+ga__memory_lander__mlp-2x64-relu__s1,ga,memory_lander,mlp 2x64 relu,1,-61.5,0.03,landing rate,15.3,2399669,4996
+ga__memory_lander__mlp-2x64-relu__s2,ga,memory_lander,mlp 2x64 relu,2,-110.66,0.01,landing rate,11.2,2211156,4996
+ga__memory_lander__mlp-2x64-sigmoid-softmax__s0,ga,memory_lander,mlp 2x64 sigmoid>softmax,0,-113.07,0.01,landing rate,16.3,1946076,4996
+ga__memory_lander__mlp-2x64-sigmoid-softmax__s1,ga,memory_lander,mlp 2x64 sigmoid>softmax,1,-117.66,0.0,landing rate,15.2,1915017,4996
+ga__memory_lander__mlp-2x64-sigmoid-softmax__s2,ga,memory_lander,mlp 2x64 sigmoid>softmax,2,-116.34,0.0,landing rate,11.8,1933374,4996
+ga__memory_lander__mlp-2x64-sigmoid__s0,ga,memory_lander,mlp 2x64 sigmoid,0,-110.32,0.0,landing rate,15.8,2471206,4996
+ga__memory_lander__mlp-2x64-sigmoid__s1,ga,memory_lander,mlp 2x64 sigmoid,1,-109.42,0.015,landing rate,16.2,2403951,4996
+ga__memory_lander__mlp-2x64-sigmoid__s2,ga,memory_lander,mlp 2x64 sigmoid,2,-108.73,0.0,landing rate,13.8,2285558,4996
+ga__memory_lander__mlp-2x64-sin__s0,ga,memory_lander,mlp 2x64 sin,0,151.32,0.75,landing rate,28.7,5488936,4996
+ga__memory_lander__mlp-2x64-sin__s1,ga,memory_lander,mlp 2x64 sin,1,175.62,0.81,landing rate,28.2,6285901,4996
+ga__memory_lander__mlp-2x64-sin__s2,ga,memory_lander,mlp 2x64 sin,2,171.16,0.76,landing rate,25.6,5401267,4996
+ga__memory_lander__mlp-2x64-tanh__s0,ga,memory_lander,mlp 2x64 tanh,0,165.27,0.76,landing rate,29.8,5708757,4996
+ga__memory_lander__mlp-2x64-tanh__s1,ga,memory_lander,mlp 2x64 tanh,1,170.21,0.84,landing rate,31.4,6793622,4996
+ga__memory_lander__mlp-2x64-tanh__s2,ga,memory_lander,mlp 2x64 tanh,2,164.82,0.67,landing rate,29.8,6094267,4996
+ga__memory_lander__rnn-64-tanh__s0,ga,memory_lander,rnn 64 tanh,0,83.53,0.21,landing rate,30.5,5070407,4932
+ga__memory_lander__rnn-64-tanh__s1,ga,memory_lander,rnn 64 tanh,1,122.01,0.38,landing rate,26.3,6588803,4932
+ga__memory_lander__rnn-64-tanh__s2,ga,memory_lander,rnn 64 tanh,2,84.89,0.215,landing rate,25.2,4807573,4932
+ga__racer__gru-64__s0,ga,racer,gru 64,0,44.65,2.3785,laps completed,45.2,4531981,14982
+ga__racer__gru-64__s1,ga,racer,gru 64,1,30.07,1.6005,laps completed,46.4,4770595,14982
+ga__racer__gru-64__s2,ga,racer,gru 64,2,45.78,2.4604,laps completed,48.8,4232744,14982
+ga__racer__mlp-16-tanh__s0,ga,racer,mlp 16 tanh,0,47.33,2.5138,laps completed,25.0,4586067,278
+ga__racer__mlp-16-tanh__s1,ga,racer,mlp 16 tanh,1,47.53,2.532,laps completed,25.9,4751049,278
+ga__racer__mlp-16-tanh__s2,ga,racer,mlp 16 tanh,2,43.85,2.3456,laps completed,25.3,4234102,278
+ga__racer__mlp-2x64-relu__s0,ga,racer,mlp 2x64 relu,0,46.45,2.4879,laps completed,34.3,4207351,5254
+ga__racer__mlp-2x64-relu__s1,ga,racer,mlp 2x64 relu,1,47.03,2.503,laps completed,32.5,3807102,5254
+ga__racer__mlp-2x64-relu__s2,ga,racer,mlp 2x64 relu,2,47.89,2.5537,laps completed,31.4,4153499,5254
+ga__racer__mlp-2x64-sigmoid-softmax__s0,ga,racer,mlp 2x64 sigmoid>softmax,0,17.57,1.1368,laps completed,34.2,4431062,5254
+ga__racer__mlp-2x64-sigmoid-softmax__s1,ga,racer,mlp 2x64 sigmoid>softmax,1,0.33,0.0332,laps completed,32.9,3638427,5254
+ga__racer__mlp-2x64-sigmoid-softmax__s2,ga,racer,mlp 2x64 sigmoid>softmax,2,17.36,1.1595,laps completed,33.5,4338513,5254
+ga__racer__mlp-2x64-sigmoid__s0,ga,racer,mlp 2x64 sigmoid,0,26.84,1.4744,laps completed,32.6,3514732,5254
+ga__racer__mlp-2x64-sigmoid__s1,ga,racer,mlp 2x64 sigmoid,1,0.63,0.0516,laps completed,36.2,3985056,5254
+ga__racer__mlp-2x64-sigmoid__s2,ga,racer,mlp 2x64 sigmoid,2,26.91,1.4755,laps completed,35.1,3634100,5254
+ga__racer__mlp-2x64-sin__s0,ga,racer,mlp 2x64 sin,0,41.08,2.2246,laps completed,30.5,4584588,5254
+ga__racer__mlp-2x64-sin__s1,ga,racer,mlp 2x64 sin,1,30.12,1.6165,laps completed,33.4,4971474,5254
+ga__racer__mlp-2x64-sin__s2,ga,racer,mlp 2x64 sin,2,47.13,2.5083,laps completed,31.3,4712301,5254
+ga__racer__mlp-2x64-tanh__s0,ga,racer,mlp 2x64 tanh,0,46.66,2.4832,laps completed,32.5,4187695,5254
+ga__racer__mlp-2x64-tanh__s1,ga,racer,mlp 2x64 tanh,1,48.32,2.5669,laps completed,37.2,4585813,5254
+ga__racer__mlp-2x64-tanh__s2,ga,racer,mlp 2x64 tanh,2,38.58,2.0547,laps completed,33.5,4498605,5254
+ga__racer__rnn-64-tanh__s0,ga,racer,rnn 64 tanh,0,26.5,1.4856,laps completed,33.0,4098437,5190
+ga__racer__rnn-64-tanh__s1,ga,racer,rnn 64 tanh,1,40.44,2.1584,laps completed,30.2,4516546,5190
+ga__racer__rnn-64-tanh__s2,ga,racer,rnn 64 tanh,2,45.19,2.4105,laps completed,32.8,4088486,5190
+neat__drone__neat-evolving__s0,neat,drone,neat evolving,0,14.66,0.85,waypoints reached,68.3,19300544,61
+neat__drone__neat-evolving__s1,neat,drone,neat evolving,1,22.94,1.565,waypoints reached,67.7,17835194,63
+neat__drone__neat-evolving__s2,neat,drone,neat evolving,2,18.04,1.685,waypoints reached,69.9,18045188,99
+neat__drone__neat-relu__s0,neat,drone,neat relu,0,29.63,2.1,waypoints reached,60.1,17454867,110
+neat__drone__neat-relu__s1,neat,drone,neat relu,1,44.03,2.81,waypoints reached,54.2,16911055,81
+neat__drone__neat-relu__s2,neat,drone,neat relu,2,13.69,0.92,waypoints reached,56.6,17468471,94
+neat__drone__neat-sigmoid__s0,neat,drone,neat sigmoid,0,21.27,1.5,waypoints reached,65.4,17286836,77
+neat__drone__neat-sigmoid__s1,neat,drone,neat sigmoid,1,17.44,1.305,waypoints reached,66.6,16135606,89
+neat__drone__neat-sigmoid__s2,neat,drone,neat sigmoid,2,32.75,2.0,waypoints reached,56.0,18436181,75
+neat__drone__neat-tanh__s0,neat,drone,neat tanh,0,7.33,0.53,waypoints reached,72.5,13300037,86
+neat__drone__neat-tanh__s1,neat,drone,neat tanh,1,19.32,1.395,waypoints reached,60.9,16636913,82
+neat__drone__neat-tanh__s2,neat,drone,neat tanh,2,12.06,0.76,waypoints reached,60.0,17145440,74
+neat__lander__neat-evolving__s0,neat,lander,neat evolving,0,198.39,1.0,landing rate,42.1,7214037,54
+neat__lander__neat-evolving__s1,neat,lander,neat evolving,1,196.66,1.0,landing rate,41.0,7947072,69
+neat__lander__neat-evolving__s2,neat,lander,neat evolving,2,208.1,1.0,landing rate,41.9,7380260,54
+neat__lander__neat-relu__s0,neat,lander,neat relu,0,196.92,0.98,landing rate,40.5,8066673,68
+neat__lander__neat-relu__s1,neat,lander,neat relu,1,206.78,1.0,landing rate,36.3,9408764,50
+neat__lander__neat-relu__s2,neat,lander,neat relu,2,190.2,0.95,landing rate,32.5,7279131,57
+neat__lander__neat-sigmoid__s0,neat,lander,neat sigmoid,0,201.56,0.99,landing rate,39.7,7495456,56
+neat__lander__neat-sigmoid__s1,neat,lander,neat sigmoid,1,202.21,1.0,landing rate,35.3,8500253,73
+neat__lander__neat-sigmoid__s2,neat,lander,neat sigmoid,2,205.6,1.0,landing rate,36.8,6643640,51
+neat__lander__neat-tanh__s0,neat,lander,neat tanh,0,202.39,1.0,landing rate,37.3,8240353,55
+neat__lander__neat-tanh__s1,neat,lander,neat tanh,1,204.65,1.0,landing rate,42.4,8905736,54
+neat__lander__neat-tanh__s2,neat,lander,neat tanh,2,201.63,1.0,landing rate,37.1,6883355,72
+neat__memory_lander__neat-evolving-recurrent__s0,neat,memory_lander,neat evolving recurrent,0,137.13,0.47,landing rate,76.8,7119515,70
+neat__memory_lander__neat-evolving-recurrent__s1,neat,memory_lander,neat evolving recurrent,1,121.69,0.275,landing rate,69.1,6935561,53
+neat__memory_lander__neat-evolving-recurrent__s2,neat,memory_lander,neat evolving recurrent,2,125.38,0.38,landing rate,69.7,7501737,68
+neat__memory_lander__neat-evolving__s0,neat,memory_lander,neat evolving,0,133.06,0.46,landing rate,53.0,8098014,83
+neat__memory_lander__neat-evolving__s1,neat,memory_lander,neat evolving,1,136.86,0.5,landing rate,44.8,8326995,48
+neat__memory_lander__neat-evolving__s2,neat,memory_lander,neat evolving,2,144.52,0.465,landing rate,47.0,8289925,48
+neat__memory_lander__neat-relu__s0,neat,memory_lander,neat relu,0,140.19,0.44,landing rate,36.2,8325531,70
+neat__memory_lander__neat-relu__s1,neat,memory_lander,neat relu,1,145.37,0.55,landing rate,43.8,8726892,79
+neat__memory_lander__neat-relu__s2,neat,memory_lander,neat relu,2,159.77,0.66,landing rate,38.0,8779546,76
+neat__memory_lander__neat-sigmoid__s0,neat,memory_lander,neat sigmoid,0,139.08,0.38,landing rate,43.6,8614011,67
+neat__memory_lander__neat-sigmoid__s1,neat,memory_lander,neat sigmoid,1,171.43,0.745,landing rate,40.8,7279872,67
+neat__memory_lander__neat-sigmoid__s2,neat,memory_lander,neat sigmoid,2,133.46,0.34,landing rate,48.0,8908394,96
+neat__memory_lander__neat-tanh-recurrent__s0,neat,memory_lander,neat tanh recurrent,0,148.37,0.545,landing rate,66.6,8809087,48
+neat__memory_lander__neat-tanh-recurrent__s1,neat,memory_lander,neat tanh recurrent,1,117.92,0.425,landing rate,74.8,7132129,67
+neat__memory_lander__neat-tanh-recurrent__s2,neat,memory_lander,neat tanh recurrent,2,142.19,0.585,landing rate,69.2,9308157,65
+neat__memory_lander__neat-tanh__s0,neat,memory_lander,neat tanh,0,159.99,0.61,landing rate,42.0,9224141,74
+neat__memory_lander__neat-tanh__s1,neat,memory_lander,neat tanh,1,146.73,0.66,landing rate,42.2,8758491,44
+neat__memory_lander__neat-tanh__s2,neat,memory_lander,neat tanh,2,124.73,0.29,landing rate,40.1,8601435,73
+neat__racer__neat-evolving__s0,neat,racer,neat evolving,0,46.76,2.4806,laps completed,56.6,7418649,75
+neat__racer__neat-evolving__s1,neat,racer,neat evolving,1,47.68,2.5323,laps completed,50.5,6820654,80
+neat__racer__neat-evolving__s2,neat,racer,neat evolving,2,47.15,2.512,laps completed,47.2,7021555,83
+neat__racer__neat-relu__s0,neat,racer,neat relu,0,47.21,2.5044,laps completed,48.3,7760290,90
+neat__racer__neat-relu__s1,neat,racer,neat relu,1,47.98,2.5532,laps completed,51.4,7391651,98
+neat__racer__neat-relu__s2,neat,racer,neat relu,2,48.38,2.5691,laps completed,48.6,7378821,100
+neat__racer__neat-sigmoid__s0,neat,racer,neat sigmoid,0,47.45,2.5226,laps completed,53.5,7105418,76
+neat__racer__neat-sigmoid__s1,neat,racer,neat sigmoid,1,48.33,2.5639,laps completed,49.9,7047919,91
+neat__racer__neat-sigmoid__s2,neat,racer,neat sigmoid,2,46.31,2.4619,laps completed,50.1,7086947,75
+neat__racer__neat-tanh__s0,neat,racer,neat tanh,0,45.0,2.4114,laps completed,51.8,7173393,94
+neat__racer__neat-tanh__s1,neat,racer,neat tanh,1,47.55,2.5305,laps completed,47.9,7156164,71
+neat__racer__neat-tanh__s2,neat,racer,neat tanh,2,48.48,2.5717,laps completed,48.4,7661624,77
+ppo__drone__gru-64__s0,ppo,drone,gru 64,0,95.22,5.975,waypoints reached,181.2,999424,15044
+ppo__drone__gru-64__s1,ppo,drone,gru 64,1,104.01,6.52,waypoints reached,167.7,999424,15044
+ppo__drone__gru-64__s2,ppo,drone,gru 64,2,95.81,6.01,waypoints reached,170.5,999424,15044
+ppo__drone__mlp-16-tanh__s0,ppo,drone,mlp 16 tanh,0,53.29,3.335,waypoints reached,36.7,999424,260
+ppo__drone__mlp-16-tanh__s1,ppo,drone,mlp 16 tanh,1,55.07,3.37,waypoints reached,34.5,999424,260
+ppo__drone__mlp-16-tanh__s2,ppo,drone,mlp 16 tanh,2,48.36,3.015,waypoints reached,35.9,999424,260
+ppo__drone__mlp-256-tanh__s0,ppo,drone,mlp 256 tanh,0,28.6,1.94,waypoints reached,49.9,999424,4100
+ppo__drone__mlp-256-tanh__s1,ppo,drone,mlp 256 tanh,1,33.9,2.1,waypoints reached,50.0,999424,4100
+ppo__drone__mlp-256-tanh__s2,ppo,drone,mlp 256 tanh,2,30.75,2.01,waypoints reached,49.7,999424,4100
+ppo__drone__mlp-2x64-elu__s0,ppo,drone,mlp 2x64 elu,0,74.95,4.665,waypoints reached,48.7,999424,5188
+ppo__drone__mlp-2x64-elu__s1,ppo,drone,mlp 2x64 elu,1,69.47,4.345,waypoints reached,50.5,999424,5188
+ppo__drone__mlp-2x64-elu__s2,ppo,drone,mlp 2x64 elu,2,72.09,4.515,waypoints reached,51.7,999424,5188
+ppo__drone__mlp-2x64-gaussian-relu__s0,ppo,drone,mlp 2x64 gaussian>relu,0,72.9,4.54,waypoints reached,48.5,999424,5188
+ppo__drone__mlp-2x64-gaussian-relu__s1,ppo,drone,mlp 2x64 gaussian>relu,1,71.77,4.42,waypoints reached,47.4,999424,5188
+ppo__drone__mlp-2x64-gaussian-relu__s2,ppo,drone,mlp 2x64 gaussian>relu,2,88.49,5.53,waypoints reached,48.7,999424,5188
+ppo__drone__mlp-2x64-gaussian__s0,ppo,drone,mlp 2x64 gaussian,0,86.31,5.425,waypoints reached,55.3,999424,5188
+ppo__drone__mlp-2x64-gaussian__s1,ppo,drone,mlp 2x64 gaussian,1,97.3,6.07,waypoints reached,58.0,999424,5188
+ppo__drone__mlp-2x64-gaussian__s2,ppo,drone,mlp 2x64 gaussian,2,89.32,5.625,waypoints reached,54.1,999424,5188
+ppo__drone__mlp-2x64-gelu__s0,ppo,drone,mlp 2x64 gelu,0,73.71,4.585,waypoints reached,52.8,999424,5188
+ppo__drone__mlp-2x64-gelu__s1,ppo,drone,mlp 2x64 gelu,1,85.4,5.35,waypoints reached,53.4,999424,5188
+ppo__drone__mlp-2x64-gelu__s2,ppo,drone,mlp 2x64 gelu,2,85.37,5.345,waypoints reached,59.1,999424,5188
+ppo__drone__mlp-2x64-identity__s0,ppo,drone,mlp 2x64 identity,0,13.86,1.6,waypoints reached,42.5,999424,5188
+ppo__drone__mlp-2x64-identity__s1,ppo,drone,mlp 2x64 identity,1,16.29,1.905,waypoints reached,42.4,999424,5188
+ppo__drone__mlp-2x64-identity__s2,ppo,drone,mlp 2x64 identity,2,38.77,2.88,waypoints reached,38.6,999424,5188
+ppo__drone__mlp-2x64-leaky-relu__s0,ppo,drone,mlp 2x64 leaky_relu,0,94.38,5.935,waypoints reached,42.4,999424,5188
+ppo__drone__mlp-2x64-leaky-relu__s1,ppo,drone,mlp 2x64 leaky_relu,1,106.29,6.67,waypoints reached,43.5,999424,5188
+ppo__drone__mlp-2x64-leaky-relu__s2,ppo,drone,mlp 2x64 leaky_relu,2,103.86,6.515,waypoints reached,44.7,999424,5188
+ppo__drone__mlp-2x64-relu-softmax__s0,ppo,drone,mlp 2x64 relu>softmax,0,75.31,4.69,waypoints reached,44.9,999424,5188
+ppo__drone__mlp-2x64-relu-softmax__s1,ppo,drone,mlp 2x64 relu>softmax,1,70.4,4.355,waypoints reached,49.9,999424,5188
+ppo__drone__mlp-2x64-relu-softmax__s2,ppo,drone,mlp 2x64 relu>softmax,2,79.58,4.94,waypoints reached,45.1,999424,5188
+ppo__drone__mlp-2x64-relu-tanh__s0,ppo,drone,mlp 2x64 relu>tanh,0,104.52,6.565,waypoints reached,44.3,999424,5188
+ppo__drone__mlp-2x64-relu-tanh__s1,ppo,drone,mlp 2x64 relu>tanh,1,100.89,6.31,waypoints reached,44.2,999424,5188
+ppo__drone__mlp-2x64-relu-tanh__s2,ppo,drone,mlp 2x64 relu>tanh,2,96.09,6.0,waypoints reached,43.8,999424,5188
+ppo__drone__mlp-2x64-relu__s0,ppo,drone,mlp 2x64 relu,0,93.75,5.84,waypoints reached,43.9,999424,5188
+ppo__drone__mlp-2x64-relu__s1,ppo,drone,mlp 2x64 relu,1,104.84,6.55,waypoints reached,46.2,999424,5188
+ppo__drone__mlp-2x64-relu__s2,ppo,drone,mlp 2x64 relu,2,101.83,6.375,waypoints reached,44.8,999424,5188
+ppo__drone__mlp-2x64-sigmoid-softmax__s0,ppo,drone,mlp 2x64 sigmoid>softmax,0,-15.64,0.215,waypoints reached,45.3,999424,5188
+ppo__drone__mlp-2x64-sigmoid-softmax__s1,ppo,drone,mlp 2x64 sigmoid>softmax,1,-19.13,0.265,waypoints reached,55.9,999424,5188
+ppo__drone__mlp-2x64-sigmoid-softmax__s2,ppo,drone,mlp 2x64 sigmoid>softmax,2,-19.01,0.325,waypoints reached,56.0,999424,5188
+ppo__drone__mlp-2x64-sigmoid__s0,ppo,drone,mlp 2x64 sigmoid,0,25.97,1.61,waypoints reached,47.4,999424,5188
+ppo__drone__mlp-2x64-sigmoid__s1,ppo,drone,mlp 2x64 sigmoid,1,30.11,1.93,waypoints reached,45.5,999424,5188
+ppo__drone__mlp-2x64-sigmoid__s2,ppo,drone,mlp 2x64 sigmoid,2,34.11,2.21,waypoints reached,47.2,999424,5188
+ppo__drone__mlp-2x64-silu__s0,ppo,drone,mlp 2x64 silu,0,67.4,4.21,waypoints reached,48.2,999424,5188
+ppo__drone__mlp-2x64-silu__s1,ppo,drone,mlp 2x64 silu,1,73.1,4.535,waypoints reached,45.1,999424,5188
+ppo__drone__mlp-2x64-silu__s2,ppo,drone,mlp 2x64 silu,2,75.05,4.63,waypoints reached,48.2,999424,5188
+ppo__drone__mlp-2x64-sin-tanh__s0,ppo,drone,mlp 2x64 sin>tanh,0,91.92,5.78,waypoints reached,47.1,999424,5188
+ppo__drone__mlp-2x64-sin-tanh__s1,ppo,drone,mlp 2x64 sin>tanh,1,79.21,4.985,waypoints reached,47.2,999424,5188
+ppo__drone__mlp-2x64-sin-tanh__s2,ppo,drone,mlp 2x64 sin>tanh,2,89.86,5.655,waypoints reached,47.6,999424,5188
+ppo__drone__mlp-2x64-sin__s0,ppo,drone,mlp 2x64 sin,0,71.35,4.435,waypoints reached,44.5,999424,5188
+ppo__drone__mlp-2x64-sin__s1,ppo,drone,mlp 2x64 sin,1,92.74,5.83,waypoints reached,48.1,999424,5188
+ppo__drone__mlp-2x64-sin__s2,ppo,drone,mlp 2x64 sin,2,74.81,4.635,waypoints reached,43.7,999424,5188
+ppo__drone__mlp-2x64-softplus__s0,ppo,drone,mlp 2x64 softplus,0,25.75,1.8,waypoints reached,52.5,999424,5188
+ppo__drone__mlp-2x64-softplus__s1,ppo,drone,mlp 2x64 softplus,1,59.96,3.745,waypoints reached,54.8,999424,5188
+ppo__drone__mlp-2x64-softplus__s2,ppo,drone,mlp 2x64 softplus,2,66.03,4.08,waypoints reached,50.5,999424,5188
+ppo__drone__mlp-2x64-softsign__s0,ppo,drone,mlp 2x64 softsign,0,91.83,5.76,waypoints reached,52.7,999424,5188
+ppo__drone__mlp-2x64-softsign__s1,ppo,drone,mlp 2x64 softsign,1,91.4,5.74,waypoints reached,55.1,999424,5188
+ppo__drone__mlp-2x64-softsign__s2,ppo,drone,mlp 2x64 softsign,2,86.87,5.435,waypoints reached,52.3,999424,5188
+ppo__drone__mlp-2x64-tanh-relu__s0,ppo,drone,mlp 2x64 tanh>relu,0,102.55,6.43,waypoints reached,47.2,999424,5188
+ppo__drone__mlp-2x64-tanh-relu__s1,ppo,drone,mlp 2x64 tanh>relu,1,94.07,5.9,waypoints reached,45.8,999424,5188
+ppo__drone__mlp-2x64-tanh-relu__s2,ppo,drone,mlp 2x64 tanh>relu,2,99.12,6.185,waypoints reached,46.5,999424,5188
+ppo__drone__mlp-2x64-tanh__s0,ppo,drone,mlp 2x64 tanh,0,79.84,5.015,waypoints reached,42.9,999424,5188
+ppo__drone__mlp-2x64-tanh__s1,ppo,drone,mlp 2x64 tanh,1,91.1,5.795,waypoints reached,43.7,999424,5188
+ppo__drone__mlp-2x64-tanh__s2,ppo,drone,mlp 2x64 tanh,2,79.02,4.95,waypoints reached,46.6,999424,5188
+ppo__drone__mlp-3x64-relu-sigmoid-tanh__s0,ppo,drone,mlp 3x64 relu>sigmoid>tanh,0,99.99,6.28,waypoints reached,55.3,999424,9348
+ppo__drone__mlp-3x64-relu-sigmoid-tanh__s1,ppo,drone,mlp 3x64 relu>sigmoid>tanh,1,98.58,6.165,waypoints reached,55.1,999424,9348
+ppo__drone__mlp-3x64-relu-sigmoid-tanh__s2,ppo,drone,mlp 3x64 relu>sigmoid>tanh,2,79.41,4.915,waypoints reached,50.5,999424,9348
+ppo__drone__mlp-4x64-tanh__s0,ppo,drone,mlp 4x64 tanh,0,109.91,6.905,waypoints reached,64.7,999424,13508
+ppo__drone__mlp-4x64-tanh__s1,ppo,drone,mlp 4x64 tanh,1,107.78,6.76,waypoints reached,64.5,999424,13508
+ppo__drone__mlp-4x64-tanh__s2,ppo,drone,mlp 4x64 tanh,2,112.12,7.035,waypoints reached,67.5,999424,13508
+ppo__drone__mlp-64-tanh__s0,ppo,drone,mlp 64 tanh,0,59.57,3.725,waypoints reached,34.1,999424,1028
+ppo__drone__mlp-64-tanh__s1,ppo,drone,mlp 64 tanh,1,55.14,3.41,waypoints reached,39.0,999424,1028
+ppo__drone__mlp-64-tanh__s2,ppo,drone,mlp 64 tanh,2,53.0,3.22,waypoints reached,35.0,999424,1028
+ppo__drone__resmlp-4x64-tanh__s0,ppo,drone,resmlp 4x64 tanh,0,94.77,5.92,waypoints reached,62.7,999424,13508
+ppo__drone__resmlp-4x64-tanh__s1,ppo,drone,resmlp 4x64 tanh,1,105.72,6.61,waypoints reached,67.8,999424,13508
+ppo__drone__resmlp-4x64-tanh__s2,ppo,drone,resmlp 4x64 tanh,2,103.42,6.47,waypoints reached,64.8,999424,13508
+ppo__drone__rnn-64-tanh__s0,ppo,drone,rnn 64 tanh,0,96.14,6.055,waypoints reached,78.5,999424,5124
+ppo__drone__rnn-64-tanh__s1,ppo,drone,rnn 64 tanh,1,98.52,6.175,waypoints reached,81.8,999424,5124
+ppo__drone__rnn-64-tanh__s2,ppo,drone,rnn 64 tanh,2,100.9,6.33,waypoints reached,80.6,999424,5124
+ppo__lander__gru-64__s0,ppo,lander,gru 64,0,192.79,1.0,landing rate,64.1,393216,14084
+ppo__lander__gru-64__s1,ppo,lander,gru 64,1,192.5,1.0,landing rate,62.3,393216,14084
+ppo__lander__gru-64__s2,ppo,lander,gru 64,2,180.26,0.945,landing rate,66.9,393216,14084
+ppo__lander__mlp-16-tanh__s0,ppo,lander,mlp 16 tanh,0,-59.08,0.0,landing rate,16.2,393216,180
+ppo__lander__mlp-16-tanh__s1,ppo,lander,mlp 16 tanh,1,-35.8,0.0,landing rate,13.0,393216,180
+ppo__lander__mlp-16-tanh__s2,ppo,lander,mlp 16 tanh,2,-28.97,0.0,landing rate,13.8,393216,180
+ppo__lander__mlp-256-tanh__s0,ppo,lander,mlp 256 tanh,0,115.37,0.36,landing rate,21.6,393216,2820
+ppo__lander__mlp-256-tanh__s1,ppo,lander,mlp 256 tanh,1,139.82,0.49,landing rate,20.6,393216,2820
+ppo__lander__mlp-256-tanh__s2,ppo,lander,mlp 256 tanh,2,132.18,0.415,landing rate,20.5,393216,2820
+ppo__lander__mlp-2x64-elu__s0,ppo,lander,mlp 2x64 elu,0,199.94,1.0,landing rate,18.2,393216,4868
+ppo__lander__mlp-2x64-elu__s1,ppo,lander,mlp 2x64 elu,1,198.14,1.0,landing rate,20.5,393216,4868
+ppo__lander__mlp-2x64-elu__s2,ppo,lander,mlp 2x64 elu,2,195.39,1.0,landing rate,18.2,393216,4868
+ppo__lander__mlp-2x64-gaussian-relu__s0,ppo,lander,mlp 2x64 gaussian>relu,0,67.86,0.0,landing rate,18.2,393216,4868
+ppo__lander__mlp-2x64-gaussian-relu__s1,ppo,lander,mlp 2x64 gaussian>relu,1,70.22,0.0,landing rate,17.3,393216,4868
+ppo__lander__mlp-2x64-gaussian-relu__s2,ppo,lander,mlp 2x64 gaussian>relu,2,72.28,0.0,landing rate,18.5,393216,4868
+ppo__lander__mlp-2x64-gaussian__s0,ppo,lander,mlp 2x64 gaussian,0,77.37,0.0,landing rate,21.9,393216,4868
+ppo__lander__mlp-2x64-gaussian__s1,ppo,lander,mlp 2x64 gaussian,1,74.86,0.0,landing rate,21.1,393216,4868
+ppo__lander__mlp-2x64-gaussian__s2,ppo,lander,mlp 2x64 gaussian,2,115.55,0.395,landing rate,21.0,393216,4868
+ppo__lander__mlp-2x64-gelu__s0,ppo,lander,mlp 2x64 gelu,0,180.72,0.94,landing rate,22.5,393216,4868
+ppo__lander__mlp-2x64-gelu__s1,ppo,lander,mlp 2x64 gelu,1,132.23,0.515,landing rate,20.7,393216,4868
+ppo__lander__mlp-2x64-gelu__s2,ppo,lander,mlp 2x64 gelu,2,189.39,0.99,landing rate,22.2,393216,4868
+ppo__lander__mlp-2x64-identity__s0,ppo,lander,mlp 2x64 identity,0,111.87,0.3,landing rate,15.6,393216,4868
+ppo__lander__mlp-2x64-identity__s1,ppo,lander,mlp 2x64 identity,1,120.92,0.33,landing rate,14.6,393216,4868
+ppo__lander__mlp-2x64-identity__s2,ppo,lander,mlp 2x64 identity,2,134.34,0.385,landing rate,16.4,393216,4868
+ppo__lander__mlp-2x64-leaky-relu__s0,ppo,lander,mlp 2x64 leaky_relu,0,206.34,1.0,landing rate,16.9,393216,4868
+ppo__lander__mlp-2x64-leaky-relu__s1,ppo,lander,mlp 2x64 leaky_relu,1,205.63,1.0,landing rate,17.2,393216,4868
+ppo__lander__mlp-2x64-leaky-relu__s2,ppo,lander,mlp 2x64 leaky_relu,2,201.99,1.0,landing rate,17.4,393216,4868
+ppo__lander__mlp-2x64-relu-softmax__s0,ppo,lander,mlp 2x64 relu>softmax,0,-236.03,0.0,landing rate,17.1,393216,4868
+ppo__lander__mlp-2x64-relu-softmax__s1,ppo,lander,mlp 2x64 relu>softmax,1,-172.6,0.0,landing rate,17.8,393216,4868
+ppo__lander__mlp-2x64-relu-softmax__s2,ppo,lander,mlp 2x64 relu>softmax,2,-146.18,0.0,landing rate,18.0,393216,4868
+ppo__lander__mlp-2x64-relu-tanh__s0,ppo,lander,mlp 2x64 relu>tanh,0,207.35,1.0,landing rate,18.6,393216,4868
+ppo__lander__mlp-2x64-relu-tanh__s1,ppo,lander,mlp 2x64 relu>tanh,1,206.95,1.0,landing rate,17.6,393216,4868
+ppo__lander__mlp-2x64-relu-tanh__s2,ppo,lander,mlp 2x64 relu>tanh,2,207.84,1.0,landing rate,15.8,393216,4868
+ppo__lander__mlp-2x64-relu__s0,ppo,lander,mlp 2x64 relu,0,206.93,1.0,landing rate,19.3,393216,4868
+ppo__lander__mlp-2x64-relu__s1,ppo,lander,mlp 2x64 relu,1,208.02,1.0,landing rate,15.6,393216,4868
+ppo__lander__mlp-2x64-relu__s2,ppo,lander,mlp 2x64 relu,2,207.58,1.0,landing rate,17.0,393216,4868
+ppo__lander__mlp-2x64-sigmoid-softmax__s0,ppo,lander,mlp 2x64 sigmoid>softmax,0,-238.11,0.0,landing rate,18.7,393216,4868
+ppo__lander__mlp-2x64-sigmoid-softmax__s1,ppo,lander,mlp 2x64 sigmoid>softmax,1,-239.04,0.0,landing rate,19.2,393216,4868
+ppo__lander__mlp-2x64-sigmoid-softmax__s2,ppo,lander,mlp 2x64 sigmoid>softmax,2,-143.02,0.0,landing rate,19.6,393216,4868
+ppo__lander__mlp-2x64-sigmoid__s0,ppo,lander,mlp 2x64 sigmoid,0,-152.48,0.0,landing rate,17.5,393216,4868
+ppo__lander__mlp-2x64-sigmoid__s1,ppo,lander,mlp 2x64 sigmoid,1,-147.89,0.0,landing rate,17.5,393216,4868
+ppo__lander__mlp-2x64-sigmoid__s2,ppo,lander,mlp 2x64 sigmoid,2,-152.48,0.0,landing rate,18.8,393216,4868
+ppo__lander__mlp-2x64-silu__s0,ppo,lander,mlp 2x64 silu,0,164.06,0.75,landing rate,17.7,393216,4868
+ppo__lander__mlp-2x64-silu__s1,ppo,lander,mlp 2x64 silu,1,4.28,0.0,landing rate,19.2,393216,4868
+ppo__lander__mlp-2x64-silu__s2,ppo,lander,mlp 2x64 silu,2,58.88,0.0,landing rate,19.7,393216,4868
+ppo__lander__mlp-2x64-sin-tanh__s0,ppo,lander,mlp 2x64 sin>tanh,0,155.42,0.59,landing rate,18.8,393216,4868
+ppo__lander__mlp-2x64-sin-tanh__s1,ppo,lander,mlp 2x64 sin>tanh,1,172.03,0.755,landing rate,19.3,393216,4868
+ppo__lander__mlp-2x64-sin-tanh__s2,ppo,lander,mlp 2x64 sin>tanh,2,185.1,0.875,landing rate,17.9,393216,4868
+ppo__lander__mlp-2x64-sin__s0,ppo,lander,mlp 2x64 sin,0,197.94,1.0,landing rate,17.5,393216,4868
+ppo__lander__mlp-2x64-sin__s1,ppo,lander,mlp 2x64 sin,1,194.88,0.99,landing rate,16.0,393216,4868
+ppo__lander__mlp-2x64-sin__s2,ppo,lander,mlp 2x64 sin,2,197.12,1.0,landing rate,18.5,393216,4868
+ppo__lander__mlp-2x64-softplus__s0,ppo,lander,mlp 2x64 softplus,0,32.07,0.0,landing rate,21.4,393216,4868
+ppo__lander__mlp-2x64-softplus__s1,ppo,lander,mlp 2x64 softplus,1,47.6,0.0,landing rate,20.3,393216,4868
+ppo__lander__mlp-2x64-softplus__s2,ppo,lander,mlp 2x64 softplus,2,43.61,0.0,landing rate,19.8,393216,4868
+ppo__lander__mlp-2x64-softsign__s0,ppo,lander,mlp 2x64 softsign,0,193.66,0.985,landing rate,19.7,393216,4868
+ppo__lander__mlp-2x64-softsign__s1,ppo,lander,mlp 2x64 softsign,1,195.92,1.0,landing rate,17.6,393216,4868
+ppo__lander__mlp-2x64-softsign__s2,ppo,lander,mlp 2x64 softsign,2,192.73,1.0,landing rate,21.4,393216,4868
+ppo__lander__mlp-2x64-tanh-relu__s0,ppo,lander,mlp 2x64 tanh>relu,0,197.51,1.0,landing rate,17.7,393216,4868
+ppo__lander__mlp-2x64-tanh-relu__s1,ppo,lander,mlp 2x64 tanh>relu,1,61.39,0.0,landing rate,16.6,393216,4868
+ppo__lander__mlp-2x64-tanh-relu__s2,ppo,lander,mlp 2x64 tanh>relu,2,44.75,0.0,landing rate,17.4,393216,4868
+ppo__lander__mlp-2x64-tanh__s0,ppo,lander,mlp 2x64 tanh,0,199.85,1.0,landing rate,20.5,393216,4868
+ppo__lander__mlp-2x64-tanh__s1,ppo,lander,mlp 2x64 tanh,1,188.46,0.945,landing rate,16.9,393216,4868
+ppo__lander__mlp-2x64-tanh__s2,ppo,lander,mlp 2x64 tanh,2,197.33,1.0,landing rate,18.6,393216,4868
+ppo__lander__mlp-3x64-relu-sigmoid-tanh__s0,ppo,lander,mlp 3x64 relu>sigmoid>tanh,0,200.77,1.0,landing rate,21.4,393216,9028
+ppo__lander__mlp-3x64-relu-sigmoid-tanh__s1,ppo,lander,mlp 3x64 relu>sigmoid>tanh,1,203.66,1.0,landing rate,20.3,393216,9028
+ppo__lander__mlp-3x64-relu-sigmoid-tanh__s2,ppo,lander,mlp 3x64 relu>sigmoid>tanh,2,206.68,1.0,landing rate,21.2,393216,9028
+ppo__lander__mlp-4x64-tanh__s0,ppo,lander,mlp 4x64 tanh,0,206.91,1.0,landing rate,23.4,393216,13188
+ppo__lander__mlp-4x64-tanh__s1,ppo,lander,mlp 4x64 tanh,1,202.4,1.0,landing rate,28.6,393216,13188
+ppo__lander__mlp-4x64-tanh__s2,ppo,lander,mlp 4x64 tanh,2,199.06,0.995,landing rate,24.2,393216,13188
+ppo__lander__mlp-64-tanh__s0,ppo,lander,mlp 64 tanh,0,66.89,0.145,landing rate,14.3,393216,708
+ppo__lander__mlp-64-tanh__s1,ppo,lander,mlp 64 tanh,1,57.54,0.05,landing rate,14.0,393216,708
+ppo__lander__mlp-64-tanh__s2,ppo,lander,mlp 64 tanh,2,8.52,0.0,landing rate,14.4,393216,708
+ppo__lander__resmlp-4x64-tanh__s0,ppo,lander,resmlp 4x64 tanh,0,207.85,1.0,landing rate,26.2,393216,13188
+ppo__lander__resmlp-4x64-tanh__s1,ppo,lander,resmlp 4x64 tanh,1,211.37,1.0,landing rate,28.8,393216,13188
+ppo__lander__resmlp-4x64-tanh__s2,ppo,lander,resmlp 4x64 tanh,2,207.51,1.0,landing rate,26.4,393216,13188
+ppo__lander__rnn-64-tanh__s0,ppo,lander,rnn 64 tanh,0,190.13,0.995,landing rate,29.8,393216,4804
+ppo__lander__rnn-64-tanh__s1,ppo,lander,rnn 64 tanh,1,193.61,1.0,landing rate,33.0,393216,4804
+ppo__lander__rnn-64-tanh__s2,ppo,lander,rnn 64 tanh,2,166.68,0.83,landing rate,34.1,393216,4804
+ppo__memory_lander__gru-64__s0,ppo,memory_lander,gru 64,0,142.26,0.495,landing rate,102.1,598016,14468
+ppo__memory_lander__gru-64__s1,ppo,memory_lander,gru 64,1,134.48,0.43,landing rate,97.1,598016,14468
+ppo__memory_lander__gru-64__s2,ppo,memory_lander,gru 64,2,128.84,0.325,landing rate,107.1,598016,14468
+ppo__memory_lander__mlp-16-tanh__s0,ppo,memory_lander,mlp 16 tanh,0,4.64,0.0,landing rate,21.9,598016,212
+ppo__memory_lander__mlp-16-tanh__s1,ppo,memory_lander,mlp 16 tanh,1,-15.72,0.0,landing rate,18.6,598016,212
+ppo__memory_lander__mlp-16-tanh__s2,ppo,memory_lander,mlp 16 tanh,2,37.89,0.0,landing rate,20.0,598016,212
+ppo__memory_lander__mlp-256-tanh__s0,ppo,memory_lander,mlp 256 tanh,0,84.39,0.21,landing rate,29.6,598016,3332
+ppo__memory_lander__mlp-256-tanh__s1,ppo,memory_lander,mlp 256 tanh,1,95.74,0.225,landing rate,29.7,598016,3332
+ppo__memory_lander__mlp-256-tanh__s2,ppo,memory_lander,mlp 256 tanh,2,93.3,0.19,landing rate,30.7,598016,3332
+ppo__memory_lander__mlp-2x64-tanh__s0,ppo,memory_lander,mlp 2x64 tanh,0,120.38,0.28,landing rate,27.8,598016,4996
+ppo__memory_lander__mlp-2x64-tanh__s1,ppo,memory_lander,mlp 2x64 tanh,1,130.66,0.39,landing rate,26.2,598016,4996
+ppo__memory_lander__mlp-2x64-tanh__s2,ppo,memory_lander,mlp 2x64 tanh,2,121.25,0.275,landing rate,29.6,598016,4996
+ppo__memory_lander__mlp-4x64-tanh__s0,ppo,memory_lander,mlp 4x64 tanh,0,116.44,0.285,landing rate,37.9,598016,13316
+ppo__memory_lander__mlp-4x64-tanh__s1,ppo,memory_lander,mlp 4x64 tanh,1,122.59,0.305,landing rate,36.7,598016,13316
+ppo__memory_lander__mlp-4x64-tanh__s2,ppo,memory_lander,mlp 4x64 tanh,2,124.42,0.28,landing rate,42.1,598016,13316
+ppo__memory_lander__mlp-64-tanh__s0,ppo,memory_lander,mlp 64 tanh,0,104.2,0.28,landing rate,21.5,598016,836
+ppo__memory_lander__mlp-64-tanh__s1,ppo,memory_lander,mlp 64 tanh,1,100.05,0.235,landing rate,21.9,598016,836
+ppo__memory_lander__mlp-64-tanh__s2,ppo,memory_lander,mlp 64 tanh,2,104.28,0.27,landing rate,22.9,598016,836
+ppo__memory_lander__resmlp-4x64-tanh__s0,ppo,memory_lander,resmlp 4x64 tanh,0,135.33,0.325,landing rate,39.2,598016,13316
+ppo__memory_lander__resmlp-4x64-tanh__s1,ppo,memory_lander,resmlp 4x64 tanh,1,126.64,0.33,landing rate,40.0,598016,13316
+ppo__memory_lander__resmlp-4x64-tanh__s2,ppo,memory_lander,resmlp 4x64 tanh,2,134.84,0.37,landing rate,41.0,598016,13316
+ppo__memory_lander__rnn-64-tanh__s0,ppo,memory_lander,rnn 64 tanh,0,130.9,0.4,landing rate,46.2,598016,4932
+ppo__memory_lander__rnn-64-tanh__s1,ppo,memory_lander,rnn 64 tanh,1,116.82,0.285,landing rate,50.6,598016,4932
+ppo__memory_lander__rnn-64-tanh__s2,ppo,memory_lander,rnn 64 tanh,2,137.07,0.385,landing rate,44.6,598016,4932
+ppo__racer__gru-64__s0,ppo,racer,gru 64,0,46.73,2.4793,laps completed,54.7,294912,14982
+ppo__racer__gru-64__s1,ppo,racer,gru 64,1,45.16,2.4043,laps completed,55.3,294912,14982
+ppo__racer__gru-64__s2,ppo,racer,gru 64,2,45.52,2.4203,laps completed,54.9,294912,14982
+ppo__racer__mlp-16-tanh__s0,ppo,racer,mlp 16 tanh,0,44.01,2.3374,laps completed,13.0,294912,278
+ppo__racer__mlp-16-tanh__s1,ppo,racer,mlp 16 tanh,1,46.6,2.472,laps completed,13.5,294912,278
+ppo__racer__mlp-16-tanh__s2,ppo,racer,mlp 16 tanh,2,45.76,2.4277,laps completed,11.8,294912,278
+ppo__racer__mlp-256-tanh__s0,ppo,racer,mlp 256 tanh,0,46.9,2.488,laps completed,16.3,294912,4358
+ppo__racer__mlp-256-tanh__s1,ppo,racer,mlp 256 tanh,1,46.12,2.4468,laps completed,17.9,294912,4358
+ppo__racer__mlp-256-tanh__s2,ppo,racer,mlp 256 tanh,2,47.38,2.5135,laps completed,18.1,294912,4358
+ppo__racer__mlp-2x64-elu__s0,ppo,racer,mlp 2x64 elu,0,46.6,2.4725,laps completed,17.3,294912,5254
+ppo__racer__mlp-2x64-elu__s1,ppo,racer,mlp 2x64 elu,1,46.07,2.444,laps completed,18.5,294912,5254
+ppo__racer__mlp-2x64-elu__s2,ppo,racer,mlp 2x64 elu,2,47.02,2.4942,laps completed,17.2,294912,5254
+ppo__racer__mlp-2x64-gaussian-relu__s0,ppo,racer,mlp 2x64 gaussian>relu,0,45.28,2.4021,laps completed,17.3,294912,5254
+ppo__racer__mlp-2x64-gaussian-relu__s1,ppo,racer,mlp 2x64 gaussian>relu,1,43.08,2.2935,laps completed,16.7,294912,5254
+ppo__racer__mlp-2x64-gaussian-relu__s2,ppo,racer,mlp 2x64 gaussian>relu,2,41.72,2.2245,laps completed,17.2,294912,5254
+ppo__racer__mlp-2x64-gaussian__s0,ppo,racer,mlp 2x64 gaussian,0,43.77,2.3303,laps completed,18.6,294912,5254
+ppo__racer__mlp-2x64-gaussian__s1,ppo,racer,mlp 2x64 gaussian,1,44.99,2.3866,laps completed,18.2,294912,5254
+ppo__racer__mlp-2x64-gaussian__s2,ppo,racer,mlp 2x64 gaussian,2,42.36,2.2605,laps completed,20.0,294912,5254
+ppo__racer__mlp-2x64-gelu__s0,ppo,racer,mlp 2x64 gelu,0,46.19,2.4505,laps completed,22.7,294912,5254
+ppo__racer__mlp-2x64-gelu__s1,ppo,racer,mlp 2x64 gelu,1,46.51,2.4676,laps completed,18.5,294912,5254
+ppo__racer__mlp-2x64-gelu__s2,ppo,racer,mlp 2x64 gelu,2,46.41,2.4622,laps completed,20.3,294912,5254
+ppo__racer__mlp-2x64-identity__s0,ppo,racer,mlp 2x64 identity,0,46.38,2.4687,laps completed,15.9,294912,5254
+ppo__racer__mlp-2x64-identity__s1,ppo,racer,mlp 2x64 identity,1,46.03,2.4499,laps completed,13.7,294912,5254
+ppo__racer__mlp-2x64-identity__s2,ppo,racer,mlp 2x64 identity,2,46.33,2.4577,laps completed,14.5,294912,5254
+ppo__racer__mlp-2x64-leaky-relu__s0,ppo,racer,mlp 2x64 leaky_relu,0,45.92,2.4361,laps completed,14.9,294912,5254
+ppo__racer__mlp-2x64-leaky-relu__s1,ppo,racer,mlp 2x64 leaky_relu,1,46.71,2.4778,laps completed,15.7,294912,5254
+ppo__racer__mlp-2x64-leaky-relu__s2,ppo,racer,mlp 2x64 leaky_relu,2,46.98,2.4926,laps completed,14.3,294912,5254
+ppo__racer__mlp-2x64-relu-softmax__s0,ppo,racer,mlp 2x64 relu>softmax,0,0.79,0.042,laps completed,17.0,294912,5254
+ppo__racer__mlp-2x64-relu-softmax__s1,ppo,racer,mlp 2x64 relu>softmax,1,2.21,0.1226,laps completed,18.3,294912,5254
+ppo__racer__mlp-2x64-relu-softmax__s2,ppo,racer,mlp 2x64 relu>softmax,2,0.55,0.0293,laps completed,16.1,294912,5254
+ppo__racer__mlp-2x64-relu-tanh__s0,ppo,racer,mlp 2x64 relu>tanh,0,45.63,2.421,laps completed,16.3,294912,5254
+ppo__racer__mlp-2x64-relu-tanh__s1,ppo,racer,mlp 2x64 relu>tanh,1,46.87,2.4866,laps completed,15.9,294912,5254
+ppo__racer__mlp-2x64-relu-tanh__s2,ppo,racer,mlp 2x64 relu>tanh,2,46.93,2.4898,laps completed,16.7,294912,5254
+ppo__racer__mlp-2x64-relu__s0,ppo,racer,mlp 2x64 relu,0,45.54,2.4159,laps completed,14.6,294912,5254
+ppo__racer__mlp-2x64-relu__s1,ppo,racer,mlp 2x64 relu,1,45.67,2.4229,laps completed,15.3,294912,5254
+ppo__racer__mlp-2x64-relu__s2,ppo,racer,mlp 2x64 relu,2,47.16,2.5019,laps completed,15.1,294912,5254
+ppo__racer__mlp-2x64-sigmoid-softmax__s0,ppo,racer,mlp 2x64 sigmoid>softmax,0,0.02,0.0013,laps completed,16.4,294912,5254
+ppo__racer__mlp-2x64-sigmoid-softmax__s1,ppo,racer,mlp 2x64 sigmoid>softmax,1,0.02,0.0013,laps completed,16.9,294912,5254
+ppo__racer__mlp-2x64-sigmoid-softmax__s2,ppo,racer,mlp 2x64 sigmoid>softmax,2,0.02,0.0013,laps completed,15.7,294912,5254
+ppo__racer__mlp-2x64-sigmoid__s0,ppo,racer,mlp 2x64 sigmoid,0,20.26,1.0907,laps completed,15.9,294912,5254
+ppo__racer__mlp-2x64-sigmoid__s1,ppo,racer,mlp 2x64 sigmoid,1,0.02,0.0012,laps completed,15.2,294912,5254
+ppo__racer__mlp-2x64-sigmoid__s2,ppo,racer,mlp 2x64 sigmoid,2,0.02,0.0013,laps completed,17.5,294912,5254
+ppo__racer__mlp-2x64-silu__s0,ppo,racer,mlp 2x64 silu,0,45.96,2.4384,laps completed,17.8,294912,5254
+ppo__racer__mlp-2x64-silu__s1,ppo,racer,mlp 2x64 silu,1,45.03,2.3943,laps completed,17.1,294912,5254
+ppo__racer__mlp-2x64-silu__s2,ppo,racer,mlp 2x64 silu,2,45.77,2.4281,laps completed,16.7,294912,5254
+ppo__racer__mlp-2x64-sin-tanh__s0,ppo,racer,mlp 2x64 sin>tanh,0,45.57,2.4203,laps completed,16.4,294912,5254
+ppo__racer__mlp-2x64-sin-tanh__s1,ppo,racer,mlp 2x64 sin>tanh,1,46.78,2.4815,laps completed,18.2,294912,5254
+ppo__racer__mlp-2x64-sin-tanh__s2,ppo,racer,mlp 2x64 sin>tanh,2,47.17,2.5022,laps completed,15.5,294912,5254
+ppo__racer__mlp-2x64-sin__s0,ppo,racer,mlp 2x64 sin,0,45.62,2.42,laps completed,15.5,294912,5254
+ppo__racer__mlp-2x64-sin__s1,ppo,racer,mlp 2x64 sin,1,45.8,2.434,laps completed,16.6,294912,5254
+ppo__racer__mlp-2x64-sin__s2,ppo,racer,mlp 2x64 sin,2,46.65,2.475,laps completed,17.0,294912,5254
+ppo__racer__mlp-2x64-softplus__s0,ppo,racer,mlp 2x64 softplus,0,37.45,1.9971,laps completed,17.9,294912,5254
+ppo__racer__mlp-2x64-softplus__s1,ppo,racer,mlp 2x64 softplus,1,1.74,0.0921,laps completed,18.8,294912,5254
+ppo__racer__mlp-2x64-softplus__s2,ppo,racer,mlp 2x64 softplus,2,44.15,2.3478,laps completed,18.6,294912,5254
+ppo__racer__mlp-2x64-softsign__s0,ppo,racer,mlp 2x64 softsign,0,46.98,2.4924,laps completed,18.8,294912,5254
+ppo__racer__mlp-2x64-softsign__s1,ppo,racer,mlp 2x64 softsign,1,47.62,2.5263,laps completed,18.8,294912,5254
+ppo__racer__mlp-2x64-softsign__s2,ppo,racer,mlp 2x64 softsign,2,47.29,2.5088,laps completed,18.3,294912,5254
+ppo__racer__mlp-2x64-tanh-relu__s0,ppo,racer,mlp 2x64 tanh>relu,0,47.01,2.494,laps completed,16.6,294912,5254
+ppo__racer__mlp-2x64-tanh-relu__s1,ppo,racer,mlp 2x64 tanh>relu,1,46.03,2.442,laps completed,19.3,294912,5254
+ppo__racer__mlp-2x64-tanh-relu__s2,ppo,racer,mlp 2x64 tanh>relu,2,47.52,2.5209,laps completed,16.0,294912,5254
+ppo__racer__mlp-2x64-tanh__s0,ppo,racer,mlp 2x64 tanh,0,47.5,2.5197,laps completed,15.5,294912,5254
+ppo__racer__mlp-2x64-tanh__s1,ppo,racer,mlp 2x64 tanh,1,45.95,2.4379,laps completed,16.8,294912,5254
+ppo__racer__mlp-2x64-tanh__s2,ppo,racer,mlp 2x64 tanh,2,45.56,2.4169,laps completed,15.4,294912,5254
+ppo__racer__mlp-3x64-relu-sigmoid-tanh__s0,ppo,racer,mlp 3x64 relu>sigmoid>tanh,0,45.61,2.4197,laps completed,17.1,294912,9414
+ppo__racer__mlp-3x64-relu-sigmoid-tanh__s1,ppo,racer,mlp 3x64 relu>sigmoid>tanh,1,45.94,2.4373,laps completed,18.3,294912,9414
+ppo__racer__mlp-3x64-relu-sigmoid-tanh__s2,ppo,racer,mlp 3x64 relu>sigmoid>tanh,2,44.72,2.3829,laps completed,21.4,294912,9414
+ppo__racer__mlp-4x64-tanh__s0,ppo,racer,mlp 4x64 tanh,0,45.47,2.4123,laps completed,19.7,294912,13574
+ppo__racer__mlp-4x64-tanh__s1,ppo,racer,mlp 4x64 tanh,1,44.47,2.3595,laps completed,22.0,294912,13574
+ppo__racer__mlp-4x64-tanh__s2,ppo,racer,mlp 4x64 tanh,2,45.32,2.4043,laps completed,20.2,294912,13574
+ppo__racer__mlp-64-tanh__s0,ppo,racer,mlp 64 tanh,0,46.07,2.4443,laps completed,13.8,294912,1094
+ppo__racer__mlp-64-tanh__s1,ppo,racer,mlp 64 tanh,1,45.25,2.4114,laps completed,14.8,294912,1094
+ppo__racer__mlp-64-tanh__s2,ppo,racer,mlp 64 tanh,2,44.78,2.3861,laps completed,14.1,294912,1094
+ppo__racer__resmlp-4x64-tanh__s0,ppo,racer,resmlp 4x64 tanh,0,46.21,2.4516,laps completed,23.5,294912,13574
+ppo__racer__resmlp-4x64-tanh__s1,ppo,racer,resmlp 4x64 tanh,1,45.42,2.4099,laps completed,22.1,294912,13574
+ppo__racer__resmlp-4x64-tanh__s2,ppo,racer,resmlp 4x64 tanh,2,46.18,2.4497,laps completed,21.9,294912,13574
+ppo__racer__rnn-64-tanh__s0,ppo,racer,rnn 64 tanh,0,44.54,2.363,laps completed,25.1,294912,5190
+ppo__racer__rnn-64-tanh__s1,ppo,racer,rnn 64 tanh,1,44.18,2.3465,laps completed,29.4,294912,5190
+ppo__racer__rnn-64-tanh__s2,ppo,racer,rnn 64 tanh,2,45.41,2.4126,laps completed,25.6,294912,5190

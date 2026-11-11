@@ -386,8 +386,9 @@ def fig_heatmap(rows, out_dir):
     ax.grid(which="minor", color=SURFACE, linewidth=2)
     ax.tick_params(which="minor", length=0)
     suptitle(fig, "Every configuration on every environment",
-             "Number = plain score (mean of 3 seeds). Shade = score relative to the best in that column\n"
-             "(white = no better than random actions, dark blue = best). A dash means not run.", extra=0.12)
+             "Number = the task's plain score (mean of 3 seeds). Shade = total reward relative to the best\n"
+             "in that column (white = no better than random actions, dark blue = best), so a network that\n"
+             "flies well but never quite lands still gets some shade. A dash means not run.", extra=0.12)
     return save(fig, out_dir, "heatmap")
 
 
@@ -420,7 +421,8 @@ def fig_neat(rows, runs, out_dir):
     share = [counts[a] / total for a in names]
     ax.barh(y, share, height=0.46, color=AQUA, linewidth=0, zorder=2)
     for yi, a, s in zip(y, names, share):
-        ax.text(s + 0.006, yi, f"{100 * s:.0f}%  ({counts[a]} nodes)", va="center", fontsize=8.5, color=INK)
+        ax.text(s + 0.006, yi, f"{100 * s:.0f}%  ({counts[a]} nodes)", va="center", fontsize=8.5, color=INK,
+                zorder=5, bbox=dict(facecolor=SURFACE, edgecolor="none", pad=1.5))
     ax.axvline(1 / len(names), color=INK2, linewidth=1, zorder=1)
     ax.text(1 / len(names), len(names) - 0.42, " equal shares", fontsize=8, color=INK2, va="bottom", ha="left")
     ax.set_yticks(y)
@@ -588,6 +590,110 @@ def write_markdown(runs, rows, base, out_dir, path="RESULTS.md"):
         f.write("\n".join(L))
 
 
+def write_readme_tables(runs, rows, base, out_dir):
+    """The tables quoted in the README, written to results/tables.md so the README
+    numbers can be copied from the data rather than typed."""
+    sighted = ["lander", "drone", "racer"]
+    L = []
+
+    def cell(method, env, label, with_spread=False):
+        r = find(rows, method, env, label)
+        if not r:
+            return "–"
+        text = fmt_metric(env, r["metric"])
+        if with_spread:
+            text += f" ± {fmt_metric(env, r['metric_std']).rstrip('%')}"
+        return text
+
+    def mean_norm(method, label, envs):
+        vals = [find(rows, method, e, label)["norm"] for e in envs if find(rows, method, e, label)]
+        return float(np.mean(vals)) if vals else float("nan")
+
+    L += ["### leaderboard", ""]
+    lines = []
+    for env in ENV_ORDER:
+        line = [f"**{title_of(env)}** ({metric_of(env)})"]
+        for method in ("ppo", "ga", "neat"):
+            r = best_of(rows, method, env)
+            line.append(f"{fmt_metric(env, r['metric'])} · {r['label'].replace('neat ', '')} · {r['time']:.0f} s")
+        line.append(fmt_metric(env, base[env]["metric"]))
+        lines.append(line)
+    L += [md_table(["Task", "PPO", "Genetic algorithm", "NEAT", "Random actions"], lines), ""]
+
+    L += ["### cost of the best configuration", ""]
+    lines = []
+    for env in ENV_ORDER:
+        for method in ("ppo", "ga", "neat"):
+            r = best_of(rows, method, env)
+            lines.append([title_of(env), METHOD_SHORT[method], r["label"].replace("neat ", ""),
+                          fmt_metric(env, r["metric"]), f"{r['time']:.0f} s", steps_text(r["steps"]),
+                          f"{int(r['params']):,}"])
+    L += [md_table(["Task", "Method", "Network", "Score", "Training time", "Environment steps", "Parameters"],
+                   lines), ""]
+
+    def sweep(title, method, labels, envs, pretty=lambda l: l, extra=None):
+        out = [f"### {title}", ""]
+        labels = sorted(labels, key=lambda l: -mean_norm(method, l, envs))
+        lines = []
+        for l in labels:
+            line = [pretty(l)] + [cell(method, e, l) for e in envs] + [f"{mean_norm(method, l, envs):.2f}"]
+            if extra:
+                line += extra(l)
+            lines.append(line)
+        head = ["Network"] + [f"{title_of(e)}" for e in envs] + ["Overall (0 to 1)"]
+        return out + [md_table(head + (extra.header if extra else []), lines), ""]
+
+    L += sweep("activations (PPO, 2x64)", "ppo", [NetSpec("mlp", (64, 64), (x, x)).label for x in ACTIVATIONS],
+               sighted, pretty=lambda l: l.replace("mlp 2x64 ", ""))
+
+    def arch_extra(l):
+        r = find(rows, "ppo", "drone", l)
+        return [f"{int(r['params']):,}", f"{r['time']:.0f} s"] if r else ["–", "–"]
+    arch_extra.header = ["Parameters (drone)", "Training time (drone)"]
+    L += sweep("architectures (PPO, tanh)", "ppo", [x.label for x in ARCHITECTURES], ENV_ORDER, extra=arch_extra)
+    L += sweep("mixed activations (PPO)", "ppo", [x.label for x in MIXED] + ["mlp 2x64 tanh", "mlp 2x64 relu"],
+               sighted, pretty=lambda l: l.replace("mlp ", ""))
+
+    L += ["### same network, PPO / GA", ""]
+    labels = sorted([x.label for x in GA_NETS], key=lambda l: -mean_norm("ga", l, ENV_ORDER))
+    lines = [[l] + [f"{cell('ppo', e, l)} / {cell('ga', e, l)}" for e in ENV_ORDER] for l in labels]
+    L += [md_table(["Network"] + [title_of(e) for e in ENV_ORDER], lines), ""]
+
+    L += ["### NEAT variants", ""]
+    variants = [v[0] for v in NEAT_VARIANTS] + ["neat tanh recurrent", "neat evolving recurrent"]
+    lines = []
+    for v in variants:
+        rs = [r for r in runs if r["method"] == "neat" and r["label"] == v]
+        hid = np.mean([r["extra"].get("champion_hidden", 0) for r in rs])
+        con = np.mean([r["extra"].get("champion_conns", 0) for r in rs])
+        lines.append([v.replace("neat ", "")] + [cell("neat", e, v) for e in ENV_ORDER] + [f"{hid:.1f}", f"{con:.0f}"])
+    L += [md_table(["Hidden-node activation"] + [title_of(e) for e in ENV_ORDER]
+                   + ["Hidden nodes in champion", "Connections in champion"], lines), ""]
+
+    from arena.neat import EVOLVABLE
+    counts = {a: 0 for a in EVOLVABLE}
+    for r in runs:
+        if r["method"] == "neat" and "evolving" in r["label"]:
+            for a, c in r["extra"].get("champion_activations", {}).items():
+                counts[a] += c
+    total = sum(counts.values())
+    L += ["### activations kept by evolving NEAT", "",
+          md_table(["Activation", "Hidden nodes", "Share"],
+                   [[a, counts[a], f"{100 * counts[a] / max(total, 1):.0f}%"]
+                    for a in sorted(counts, key=lambda a: -counts[a])]), "", f"total {total}", ""]
+
+    L += ["### totals", "",
+          f"runs: {len(runs)}", f"configurations: {len(rows)}",
+          f"total training CPU time: {sum(r['train_time'] for r in runs) / 3600:.2f} hours",
+          f"total environment steps: {sum(r['env_steps'] for r in runs) / 1e9:.2f} billion", ""]
+    for method in ("ppo", "ga", "neat"):
+        rs = [r for r in runs if r["method"] == method]
+        L.append(f"{method}: {len(rs)} runs, {sum(r['train_time'] for r in rs) / 3600:.2f} h, "
+                 f"{sum(r['env_steps'] for r in rs) / 1e6:.0f}M steps")
+    with open(os.path.join(out_dir, "tables.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(L))
+
+
 def print_summary(rows, base):
     for env in ENV_ORDER:
         print(f"\n== {title_of(env)}  (random: {base[env]['return']:.1f}, {fmt_metric(env, base[env]['metric'])})")
@@ -609,6 +715,7 @@ def main():
     rows = aggregate(runs, base)
     write_csvs(runs, rows, a.out)
     write_markdown(runs, rows, base, a.out, "RESULTS.md" if a.out == "results" else os.path.join(a.out, "RESULTS.md"))
+    write_readme_tables(runs, rows, base, a.out)
     if not a.quiet:
         print_summary(rows, base)
 

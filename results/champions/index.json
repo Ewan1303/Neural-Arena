@@ -1,0 +1,90 @@
+{
+ "lander__ppo": {
+  "run": "ppo__lander__resmlp-4x64-tanh__s1",
+  "config": "resmlp 4x64 tanh",
+  "test_return": 211.37247678102736,
+  "test_metric": 1.0,
+  "metric_name": "landing rate"
+ },
+ "lander__ga": {
+  "run": "ga__lander__mlp-2x64-tanh__s1",
+  "config": "mlp 2x64 tanh",
+  "test_return": 210.88925792037944,
+  "test_metric": 1.0,
+  "metric_name": "landing rate"
+ },
+ "lander__neat": {
+  "run": "neat__lander__neat-evolving__s2",
+  "config": "neat evolving",
+  "test_return": 208.10012510043612,
+  "test_metric": 1.0,
+  "metric_name": "landing rate"
+ },
+ "lander__scenario": 0,
+ "memory_lander__ppo": {
+  "run": "ppo__memory_lander__gru-64__s0",
+  "config": "gru 64",
+  "test_return": 142.2641293984226,
+  "test_metric": 0.495,
+  "metric_name": "landing rate"
+ },
+ "memory_lander__ga": {
+  "run": "ga__memory_lander__mlp-16-tanh__s1",
+  "config": "mlp 16 tanh",
+  "test_return": 180.30989960652053,
+  "test_metric": 0.835,
+  "metric_name": "landing rate"
+ },
+ "memory_lander__neat": {
+  "run": "neat__memory_lander__neat-sigmoid__s1",
+  "config": "neat sigmoid",
+  "test_return": 171.43491605878967,
+  "test_metric": 0.745,
+  "metric_name": "landing rate"
+ },
+ "memory_lander__scenario": 0,
+ "drone__ppo": {
+  "run": "ppo__drone__mlp-4x64-tanh__s2",
+  "config": "mlp 4x64 tanh",
+  "test_return": 112.12121801970632,
+  "test_metric": 7.035,
+  "metric_name": "waypoints reached"
+ },
+ "drone__ga": {
+  "run": "ga__drone__rnn-64-tanh__s1",
+  "config": "rnn 64 tanh",
+  "test_return": 47.92628272920485,
+  "test_metric": 3.04,
+  "metric_name": "waypoints reached"
+ },
+ "drone__neat": {
+  "run": "neat__drone__neat-relu__s1",
+  "config": "neat relu",
+  "test_return": 44.034433664192164,
+  "test_metric": 2.81,
+  "metric_name": "waypoints reached"
+ },
+ "drone__scenario": 14,
+ "racer__ppo": {
+  "run": "ppo__racer__mlp-2x64-softsign__s1",
+  "config": "mlp 2x64 softsign",
+  "test_return": 47.620293318040204,
+  "test_metric": 2.526335024350684,
+  "metric_name": "laps completed"
+ },
+ "racer__ga": {
+  "run": "ga__racer__mlp-2x64-tanh__s1",
+  "config": "mlp 2x64 tanh",
+  "test_return": 48.32158766016441,
+  "test_metric": 2.5668769909373452,
+  "metric_name": "laps completed"
+ },
+ "racer__neat": {
+  "run": "neat__racer__neat-tanh__s2",
+  "config": "neat tanh",
+  "test_return": 48.476101688182254,
+  "test_metric": 2.5717370684998593,
+  "metric_name": "laps completed"
+ },
+ "racer__scenario": 11
+}
